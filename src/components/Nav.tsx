@@ -6,10 +6,10 @@ export default function Nav() {
     <Root>
       <A href="/">
         <img
-          src="/src/assets/logo-white.svg"
+          src="/src/assets/logo-full-white.svg"
           alt="DecentVCS Logo"
-          width={32}
-          height={32}
+          width={121}
+          height={24}
         />
       </A>
     </Root>
