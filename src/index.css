@@ -17,7 +17,3 @@ a {
   text-decoration: none;
   transition: 0.2s ease-out;
 }
-
-a:hover {
-  color: #6F57FF;
-}
