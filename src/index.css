@@ -1,0 +1,23 @@
+html {
+  background: black;
+}
+
+html, body, #root, #root > div {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.2s ease-out;
+}
+
+a:hover {
+  color: #6F57FF;
+}
