@@ -1,5 +1,6 @@
 import { A } from "@solidjs/router";
 import config from "../config";
+import { LinkButton } from "./Buttons";
 import { Link, LinksContainer, Root } from "./Nav.styles";
 
 export default function Nav() {
@@ -17,7 +18,7 @@ export default function Nav() {
         <Link href={config.docsUrl}>Documentation</Link>
         <Link href="/support">Support</Link>
         <Link href={config.dashUrl}>Sign in</Link>
-        {/** Add "Join waitlist" button */}
+        <LinkButton href="/">Join waitlist</LinkButton>
       </LinksContainer>
     </Root>
   );

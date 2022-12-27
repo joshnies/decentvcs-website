@@ -16,7 +16,7 @@ export const Root = styled.nav`
 export const LinksContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
 `;
 
 export const Link = styled(A)`
