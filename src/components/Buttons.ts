@@ -15,6 +15,7 @@ export const Button = styled.button<ButtonProps>`
   border: 1px solid ${({ theme }) => theme?.colors.neutral[0]};
   transition: 0.2s ease-out;
   cursor: pointer;
+  user-select: none;
 
   &:hover {
     background: ${({ theme }) => theme?.colors.neutral[0]};
@@ -50,6 +51,7 @@ export const LinkButton = styled(A)<ButtonProps>`
   border: 1px solid ${({ theme }) => theme?.colors.neutral[0]};
   transition: 0.2s ease-out;
   cursor: pointer;
+  user-select: none;
 
   &:hover {
     background: ${({ theme }) => theme?.colors.neutral[0]};

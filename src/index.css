@@ -17,3 +17,16 @@ a {
   text-decoration: none;
   transition: 0.2s ease-out;
 }
+
+h1 {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 77px;
+}
+
+h4 {
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
