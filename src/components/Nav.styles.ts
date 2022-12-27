@@ -13,39 +13,16 @@ export const Root = styled.nav`
   }
 `;
 
-export const Left = styled.div`
+export const LinksContainer = styled.div`
   display: flex;
   align-items: center;
-  width: 100%;
-  padding-left: 0.5rem;
+  gap: 2rem;
 `;
 
-export const NavTeamName = styled(A)`
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
+export const Link = styled(A)`
   color: ${({ theme }) => theme?.colors.neutral[400]};
-  margin-left: 2rem;
-
-  span {
-    color: ${({ theme }) => theme?.colors.neutral[900]};
-  }
 
   &:hover {
-    color: ${({ theme }) => theme?.colors.primary[500]};
-
-    span {
-      color: ${({ theme }) => theme?.colors.primary[500]};
-    }
-
-    i {
-      color: ${({ theme }) => theme?.colors.primary[500]};
-    }
+    color: ${({ theme }) => theme?.colors.neutral[0]};
   }
-`;
-
-export const NavTeamNameIcon = styled.i`
-  color: ${({ theme }) => theme?.colors.neutral[400]};
-  font-size: 1.5rem;
-  margin-left: 0.25rem;
 `;

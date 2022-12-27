@@ -1,5 +1,6 @@
 import { A } from "@solidjs/router";
-import { Root } from "./Nav.styles";
+import config from "../config";
+import { Link, LinksContainer, Root } from "./Nav.styles";
 
 export default function Nav() {
   return (
@@ -12,6 +13,12 @@ export default function Nav() {
           height={24}
         />
       </A>
+      <LinksContainer>
+        <Link href={config.docsUrl}>Documentation</Link>
+        <Link href="/support">Support</Link>
+        <Link href={config.dashUrl}>Sign in</Link>
+        {/** Add "Join waitlist" button */}
+      </LinksContainer>
     </Root>
   );
 }
