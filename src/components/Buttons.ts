@@ -28,7 +28,6 @@ export const Button = styled.button<ButtonProps>`
 
   &:focus {
     border: 1px solid ${({ theme }) => theme?.colors.neutral[0]};
-    border: none;
     outline: none;
   }
 
