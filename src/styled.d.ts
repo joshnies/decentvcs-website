@@ -52,5 +52,6 @@ declare module "solid-styled-components" {
     shadows: {
       large: string;
     };
+    maxWidth: string;
   }
 }

@@ -67,4 +67,5 @@ export const lightTheme = {
       0px 1.62963px 6.51852px rgba(0, 0, 0, 0.0117778),
       0px 0.37037px 3.14815px rgba(0, 0, 0, 0.00722222)`,
   },
+  maxWidth: "1440px",
 };
