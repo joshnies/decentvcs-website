@@ -1,6 +1,11 @@
 import HeroUXSection from "../components/HeroUXSection";
 import BaseLayout from "../layouts/BaseLayout";
-import { Hero, HeroTitle, HeroWaitlistInput } from "./HomePage.styles";
+import {
+  BackgroundImage,
+  Hero,
+  HeroTitle,
+  HeroWaitlistInput,
+} from "./HomePage.styles";
 
 const HomePage = () => {
   const onSubmitWaitlistForm = (e: Event) => {
@@ -10,6 +15,7 @@ const HomePage = () => {
 
   return (
     <BaseLayout>
+      <BackgroundImage src="/src/assets/home-bg.png" />
       <Hero>
         <h4>Introducing DecentVCS</h4>
         <HeroTitle>Simple version control for massive projects.</HeroTitle>
