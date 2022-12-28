@@ -1,3 +1,4 @@
+import HeroUXSection from "../components/HeroUXSection";
 import BaseLayout from "../layouts/BaseLayout";
 import { Hero, HeroTitle, HeroWaitlistInput } from "./HomePage.styles";
 
@@ -19,6 +20,7 @@ const HomePage = () => {
           Join waitlist
         </HeroWaitlistInput>
       </Hero>
+      <HeroUXSection />
     </BaseLayout>
   );
 };

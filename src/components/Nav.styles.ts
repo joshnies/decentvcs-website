@@ -7,8 +7,8 @@ export const Root = styled.nav`
   justify-content: space-between;
   width: 100%;
   max-width: ${({ theme }) => theme?.maxWidth};
+  height: ${({ theme }) => theme?.navHeight};
   margin: 0 auto;
-  margin-bottom: 2rem;
 
   img {
     user-select: none;

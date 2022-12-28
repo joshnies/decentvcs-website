@@ -6,7 +6,10 @@ export const Hero = styled.section`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: 15vh;
+  height: calc(
+    100vh - ${({ theme }) => `${theme?.navHeight} - ${theme?.footerHeight}`}
+  );
+  padding-top: 15vh;
 `;
 
 export const HeroTitle = styled.h1`

@@ -53,5 +53,7 @@ declare module "solid-styled-components" {
       large: string;
     };
     maxWidth: string;
+    navHeight: string;
+    footerHeight: string;
   }
 }

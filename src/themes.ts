@@ -68,4 +68,6 @@ export const lightTheme = {
       0px 0.37037px 3.14815px rgba(0, 0, 0, 0.00722222)`,
   },
   maxWidth: "1440px",
+  navHeight: "6rem",
+  footerHeight: "0rem",
 };
