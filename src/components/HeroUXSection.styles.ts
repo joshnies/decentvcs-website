@@ -13,7 +13,7 @@ export const Content = styled.div`
   width: 100%;
   max-width: ${({ theme }) => theme?.maxWidth};
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 2rem;
 
   color: ${({ theme }) => theme?.colors.neutral[1000]};
 `;

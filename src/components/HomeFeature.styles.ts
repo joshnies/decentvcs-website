@@ -5,6 +5,7 @@ export const Root = styled.div<{ flip?: boolean }>`
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  padding: 0 2rem;
 
   h2 {
     max-width: 500px;

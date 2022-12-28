@@ -9,6 +9,7 @@ export const Root = styled.nav`
   max-width: ${({ theme }) => theme?.maxWidth};
   height: ${({ theme }) => theme?.navHeight};
   margin: 0 auto;
+  padding: 0 2rem;
 
   img {
     user-select: none;
