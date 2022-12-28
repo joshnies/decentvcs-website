@@ -1,4 +1,5 @@
 import HeroUXSection from "../components/HeroUXSection";
+import ScrollIndicator from "../components/ScrollIndicator";
 import BaseLayout from "../layouts/BaseLayout";
 import {
   BackgroundImage,
@@ -20,12 +21,14 @@ const HomePage = () => {
         <h4>Introducing DecentVCS</h4>
         <HeroTitle>Simple version control for massive projects.</HeroTitle>
         <HeroWaitlistInput
+          type="email"
           placeholder="Enter email address"
           onSubmit={onSubmitWaitlistForm}
         >
           Join waitlist
         </HeroWaitlistInput>
       </Hero>
+      <ScrollIndicator />
       <HeroUXSection />
     </BaseLayout>
   );
