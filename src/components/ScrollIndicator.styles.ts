@@ -33,4 +33,22 @@ export const DesktopIndicatorLine = styled.div`
   border-left: 1px solid ${({ theme }) => theme?.colors.neutral[0]};
   height: 13px;
   margin: 8px;
+  animation: scroll 2s infinite;
+
+  @keyframes scroll {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    90% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    91% {
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
