@@ -72,3 +72,14 @@ export const HeroWaitlistInput = styled(InputWithButton)`
     }
   }
 `;
+
+export const Features = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rem;
+  width: 100%;
+  max-width: ${({ theme }) => theme?.maxWidth};
+  margin: 0 auto;
+  padding: 12rem 0;
+`;

@@ -24,6 +24,10 @@ export const TextBlock = styled.div`
   justify-content: center;
   max-width: 450px;
 
+  h2 {
+    margin-top: 0.5rem;
+  }
+
   p {
     margin-top: 2rem;
   }

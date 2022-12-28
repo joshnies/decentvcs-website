@@ -1,6 +1,7 @@
+import { Component } from "solid-js";
 import { Content, Root, Screen, TextBlock } from "./HeroUXSection.styles";
 
-export default function HeroUXSection() {
+const HeroUXSection: Component = () => {
   return (
     <Root>
       <Content>
@@ -21,4 +22,6 @@ export default function HeroUXSection() {
       </Content>
     </Root>
   );
-}
+};
+
+export default HeroUXSection;
