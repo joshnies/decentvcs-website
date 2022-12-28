@@ -4,6 +4,7 @@ import BaseLayout from "../layouts/BaseLayout";
 import {
   BackgroundImage,
   Hero,
+  HeroSubtitle,
   HeroTitle,
   HeroWaitlistInput,
 } from "./HomePage.styles";
@@ -18,7 +19,7 @@ const HomePage = () => {
     <BaseLayout>
       <BackgroundImage src="/src/assets/home-bg.png" />
       <Hero>
-        <h4>Introducing DecentVCS</h4>
+        <HeroSubtitle>Introducing DecentVCS</HeroSubtitle>
         <HeroTitle>Simple version control for massive projects.</HeroTitle>
         <HeroWaitlistInput
           type="email"

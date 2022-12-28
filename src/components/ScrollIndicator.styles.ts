@@ -10,8 +10,21 @@ export const Root = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   width: ${`${width}px`};
+  animation: fadeInScrollIndicator 0.5s ease-in-out;
+  animation-delay: 0.75s;
+  animation-fill-mode: both;
+
+  @keyframes fadeInScrollIndicator {
+    0% {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 `;
 
 export const Text = styled.p`
