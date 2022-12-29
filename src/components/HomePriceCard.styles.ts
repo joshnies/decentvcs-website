@@ -13,6 +13,10 @@ export const Root = styled.section`
     color: ${({ theme }) => theme?.colors.neutral[1000]};
     max-width: 400px;
   }
+
+  @media (max-width: ${({ theme }) => theme?.maxWidth}) {
+    border-radius: 0;
+  }
 `;
 
 export const Header = styled.div`
