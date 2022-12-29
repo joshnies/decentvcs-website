@@ -9,7 +9,7 @@ export default function Nav() {
       <A href="/">
         <img
           src="/src/assets/logo-full-white.svg"
-          alt="DecentVCS Logo"
+          alt="DecentVCS"
           width={144}
           height={24}
         />
