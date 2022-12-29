@@ -12,8 +12,11 @@ const App: Component = () => {
 
   // Styles for applying current theme globally
   const GlobalStyles = createGlobalStyles`
-    a:hover {
+    a {
       color: ${theme().colors.primary[500]};
+    }
+    a:hover {
+      color: ${theme().colors.primary[700]};
     }
   `;
 

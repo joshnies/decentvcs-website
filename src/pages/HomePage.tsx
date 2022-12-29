@@ -1,5 +1,6 @@
 import HeroUXSection from "../components/HeroUXSection";
 import HomeFeature from "../components/HomeFeature";
+import HomePriceCard from "../components/HomePriceCard";
 import ScrollIndicator from "../components/ScrollIndicator";
 import BaseLayout from "../layouts/BaseLayout";
 import {
@@ -58,6 +59,7 @@ const HomePage = () => {
           because we handle all the hosting for you, securely in the cloud.
         </HomeFeature>
       </Features>
+      <HomePriceCard />
     </BaseLayout>
   );
 };
