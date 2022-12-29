@@ -1,5 +1,6 @@
 import HeroUXSection from "../components/HeroUXSection";
 import HomeFeature from "../components/HomeFeature";
+import HomeFinalCTA from "../components/HomeFinalCTA";
 import HomePriceCard from "../components/HomePriceCard";
 import ScrollIndicator from "../components/ScrollIndicator";
 import BaseLayout from "../layouts/BaseLayout";
@@ -60,6 +61,7 @@ const HomePage = () => {
         </HomeFeature>
       </Features>
       <HomePriceCard />
+      <HomeFinalCTA />
     </BaseLayout>
   );
 };
