@@ -6,7 +6,7 @@ const HomeFinalCTA: Component = () => {
     <Root>
       <div>
         <h4>Join the waitlist</h4>
-        <h2>We&apos;ll let you known when it&apos;s ready.</h2>
+        <h2>We&apos;ll let you know when it&apos;s ready.</h2>
         <StyledInputWithButton type="email" placeholder="Enter email address">
           Join waitlist
         </StyledInputWithButton>
