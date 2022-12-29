@@ -15,9 +15,7 @@ export const Hero = styled.section`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: calc(
-    100vh - ${({ theme }) => `${theme?.navHeight} - ${theme?.footerHeight}`}
-  );
+  height: calc(100vh - ${({ theme }) => `${theme?.navHeight}`});
   padding-top: 15vh;
 `;
 

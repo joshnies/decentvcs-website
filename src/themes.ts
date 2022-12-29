@@ -69,5 +69,5 @@ export const lightTheme = {
   },
   maxWidth: "1440px",
   navHeight: "6rem",
-  footerHeight: "0rem",
+  footerHeight: "28rem",
 };

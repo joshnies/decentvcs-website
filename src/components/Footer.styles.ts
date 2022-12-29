@@ -1,7 +1,7 @@
 import { styled } from "solid-styled-components";
 
 export const Root = styled.footer`
-  height: 450px;
+  height: ${({ theme }) => theme?.footerHeight};
   padding: 4rem;
   background: ${({ theme }) => theme?.colors.neutral[900]};
 `;
