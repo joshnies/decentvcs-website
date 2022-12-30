@@ -31,6 +31,7 @@ export const HamburgerButton = styled.button`
   cursor: pointer;
   margin: 0;
   transition: 0.2s ease-out;
+  z-index: 99;
 
   &:hover {
     background: rgba(255, 255, 255, 0.15);
