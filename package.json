@@ -4,7 +4,7 @@
   "description": "DecentVCS website",
   "scripts": {
     "start": "doppler run -- vite",
-    "build": "doppler run -- vite build",
+    "build": "vite build",
     "serve": "vite preview"
   },
   "devDependencies": {
