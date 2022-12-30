@@ -16,7 +16,7 @@ export const Hero = styled.section`
   align-items: center;
   width: 100%;
   height: calc(100vh - ${({ theme }) => `${theme?.navHeight}`});
-  padding-top: 15vh;
+  padding: 15vh 2rem 0;
 `;
 
 export const HeroSubtitle = styled.h4`
@@ -56,10 +56,14 @@ export const HeroTitle = styled.h1`
 `;
 
 export const HeroWaitlistInput = styled(InputWithButton)`
-  width: 400px;
+  width: 100%;
   animation: fadeInWaitlistInput 0.5s ease-in-out;
   animation-delay: 0.5s;
   animation-fill-mode: both;
+
+  @media screen and (min-width: 768px) {
+    width: 400px;
+  }
 
   @keyframes fadeInWaitlistInput {
     0% {
