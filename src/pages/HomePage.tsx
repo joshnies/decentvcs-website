@@ -1,3 +1,5 @@
+import toast from "solid-toast";
+import { isEmail } from "class-validator";
 import HeroUXSection from "../components/HeroUXSection";
 import HomeFeature from "../components/HomeFeature";
 import HomeFinalCTA from "../components/HomeFinalCTA";
@@ -12,11 +14,40 @@ import {
   HeroTitle,
   HeroWaitlistInput,
 } from "./HomePage.styles";
+import config from "../config";
 
 const HomePage = () => {
-  const onSubmitWaitlistForm = (e: Event) => {
-    e.preventDefault();
-    console.log("TODO: Handle waitlist form submission");
+  const onSubmitWaitlistForm = async (value: string) => {
+    const email = value.trim();
+
+    if (email.length === 0) {
+      return;
+    }
+
+    if (!isEmail(email)) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+
+    try {
+      await fetch(config.joinWaitlistWebhookUrl, {
+        method: "POST",
+        mode: "no-cors",
+        cache: "no-cache",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+        }),
+      });
+    } catch (err) {
+      console.error(err);
+      toast.error("Something went wrong. Please try again later.");
+      return;
+    }
+
+    toast.success("You're in! We'll notify you once it's ready.");
   };
 
   return (

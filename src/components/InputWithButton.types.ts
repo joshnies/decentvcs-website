@@ -1,6 +1,9 @@
 import { JSX } from "solid-js";
 import { AsProps } from "solid-styled-components";
 
-export type InputWithButtonProps = JSX.InputHTMLAttributes<HTMLInputElement> &
-  Pick<JSX.InputHTMLAttributes<HTMLFormElement>, "onSubmit"> &
-  AsProps;
+type OriginalInputProps = JSX.InputHTMLAttributes<HTMLInputElement> & AsProps;
+
+export interface InputWithButtonProps
+  extends Omit<OriginalInputProps, "onSubmit"> {
+  onSubmit: (value: string) => void;
+}
