@@ -1,9 +1,14 @@
 import { A } from "@solidjs/router";
+import { createMediaQuery } from "@solid-primitives/media";
 import config from "../config";
 import { LinkButton } from "./Buttons";
-import { Link, LinksContainer, Root } from "./Nav.styles";
+import { HamburgerButton, Link, LinksContainer, Root } from "./Nav.styles";
+import { createSignal } from "solid-js";
 
 export default function Nav() {
+  const [showDrawer, setShowDrawer] = createSignal(false);
+  const showLinks = createMediaQuery("(min-width: 768px)");
+
   return (
     <Root>
       <A href="/">
@@ -14,12 +19,19 @@ export default function Nav() {
           height={24}
         />
       </A>
-      <LinksContainer>
-        <Link href={config.docsUrl}>Documentation</Link>
-        <Link href="/support">Support</Link>
-        <Link href={config.dashUrl}>Sign in</Link>
-        <LinkButton href="/">Join waitlist</LinkButton>
-      </LinksContainer>
+      {!showLinks() && (
+        <HamburgerButton onClick={() => setShowDrawer(!showDrawer())}>
+          <i class={showDrawer() ? "ph-x" : "ph-list"} />
+        </HamburgerButton>
+      )}
+      {showLinks() && (
+        <LinksContainer>
+          <Link href={config.docsUrl}>Documentation</Link>
+          <Link href="/support">Support</Link>
+          <Link href={config.dashUrl}>Sign in</Link>
+          <LinkButton href="/">Join waitlist</LinkButton>
+        </LinksContainer>
+      )}
     </Root>
   );
 }
