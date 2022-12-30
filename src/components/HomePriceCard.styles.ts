@@ -2,29 +2,39 @@ import { styled } from "solid-styled-components";
 
 export const Root = styled.section`
   display: flex;
+  flex-direction: column;
+  gap: 4rem;
   width: 100%;
   max-width: ${({ theme }) => theme?.maxWidth};
   padding: 4rem;
   margin: 0 auto;
   background: ${({ theme }) => theme?.colors.neutral[0]};
-  border-radius: 1rem;
 
   h2 {
     color: ${({ theme }) => theme?.colors.neutral[1000]};
-    max-width: 400px;
   }
 
-  @media (max-width: ${({ theme }) => theme?.maxWidth}) {
-    border-radius: 0;
+  @media screen and (min-width: ${({ theme }) => theme?.maxWidth}) {
+    flex-direction: row;
+    gap: 0;
+    border-radius: 1rem;
+
+    h2 {
+      max-width: 400px;
+    }
   }
 `;
 
 export const Header = styled.div`
-  width: 50%;
+  @media screen and (min-width: ${({ theme }) => theme?.maxWidth}) {
+    width: 50%;
+  }
 `;
 
 export const Details = styled.div`
-  width: 50%;
+  @media screen and (min-width: ${({ theme }) => theme?.maxWidth}) {
+    width: 50%;
+  }
 
   h3 {
     font-size: 4rem;
