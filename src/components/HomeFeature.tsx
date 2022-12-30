@@ -1,8 +1,11 @@
+import { createMediaQuery } from "@solid-primitives/media";
 import { ParentComponent } from "solid-js";
 import { Root } from "./HomeFeature.styles";
 import { HomeFeatureProps } from "./HomeFeature.types";
 
 const HomeFeature: ParentComponent<HomeFeatureProps> = (props) => {
+  const isLarge = createMediaQuery("(min-width: 768px)");
+
   const header = (
     <div>
       <h4>{props.subtitle}</h4>
@@ -13,8 +16,8 @@ const HomeFeature: ParentComponent<HomeFeatureProps> = (props) => {
   const description = <p>{props.children}</p>;
 
   return (
-    <Root flip={props.flip}>
-      {props.flip ? [description, header] : [header, description]}
+    <Root>
+      {props.flip && isLarge() ? [description, header] : [header, description]}
     </Root>
   );
 };
