@@ -30,7 +30,7 @@ const HomePage = () => {
     }
 
     try {
-      await fetch(config.joinWaitlistWebhookUrl, {
+      const res = await fetch(config.joinWaitlistWebhookUrl, {
         method: "POST",
         mode: "no-cors",
         cache: "no-cache",
@@ -41,6 +41,10 @@ const HomePage = () => {
           email,
         }),
       });
+
+      if (![200, 0].includes(res.status)) {
+        throw new Error(`Received ${res.status} status code from webhook.`);
+      }
     } catch (err) {
       console.error(err);
       toast.error("Something went wrong. Please try again later.");
