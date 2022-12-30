@@ -17,7 +17,7 @@ import {
 import config from "../config";
 
 const HomePage = () => {
-  const onSubmitWaitlistForm = async (value: string) => {
+  const onSubmitWaitlistForm = async (ref: HTMLInputElement, value: string) => {
     const email = value.trim();
 
     if (email.length === 0) {
@@ -47,7 +47,12 @@ const HomePage = () => {
       return;
     }
 
-    toast.success("You're in! We'll notify you once it's ready.");
+    toast.success("You're in! We'll notify you once it's ready.", {
+      duration: 5000, // 5 seconds
+    });
+
+    // Clear input
+    ref.value = "";
   };
 
   return (

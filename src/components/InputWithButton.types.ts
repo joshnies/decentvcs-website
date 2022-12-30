@@ -5,5 +5,5 @@ type OriginalInputProps = JSX.InputHTMLAttributes<HTMLInputElement> & AsProps;
 
 export interface InputWithButtonProps
   extends Omit<OriginalInputProps, "onSubmit"> {
-  onSubmit: (value: string) => void;
+  onSubmit: (ref: HTMLInputElement, value: string) => void;
 }

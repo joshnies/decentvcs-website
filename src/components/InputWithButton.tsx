@@ -16,7 +16,7 @@ const InputWithButton: Component<InputWithButtonProps> = (props) => {
 
     if (!inputRef) return;
 
-    props.onSubmit(inputRef?.value);
+    props.onSubmit(inputRef, inputRef?.value);
   };
 
   return (
