@@ -33,6 +33,32 @@ export const Text = styled.p`
   text-align: center;
 `;
 
+export const TouchIndicator = styled.div`
+  width: 30px;
+  height: 30px;
+  background: ${({ theme }) => theme?.colors.neutral[0]};
+  border-radius: 100px;
+  animation: scroll 2s infinite;
+  transform: translateY(20px);
+
+  @keyframes scroll {
+    0% {
+      transform: translateY(20px);
+      opacity: 1;
+    }
+    90% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    91% {
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+`;
+
 export const DesktopIndicator = styled.div`
   display: flex;
   justify-content: center;
