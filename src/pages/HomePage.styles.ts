@@ -56,7 +56,6 @@ export const HeroTitle = styled.h1`
 `;
 
 export const HeroWaitlistInput = styled(InputWithButton)`
-  width: 100%;
   animation: fadeInWaitlistInput 0.5s ease-in-out;
   animation-delay: 0.5s;
   animation-fill-mode: both;
