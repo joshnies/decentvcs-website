@@ -24,7 +24,6 @@ const Footer: Component = () => {
               <A href={config.docsUrl}>Documentation</A>
               <A href="/downloads">Downloads</A>
               <A href="/support">Support</A>
-              <A href={config.dashUrl}>Sign in</A>
             </SitemapGroup>
             <SitemapGroup>
               <h3>Legal</h3>
