@@ -1,5 +1,6 @@
 import toast from "solid-toast";
 import { isEmail } from "class-validator";
+import { Component } from "solid-js";
 import HeroUXSection from "../components/HeroUXSection";
 import HomeFeature from "../components/HomeFeature";
 import HomeFinalCTA from "../components/HomeFinalCTA";
@@ -17,7 +18,7 @@ import {
 import config from "../config";
 import homeBackgroundImageUrl from "../assets/home-bg.png";
 
-const HomePage = () => {
+const HomePage: Component = () => {
   const onSubmitWaitlistForm = async (ref: HTMLInputElement, value: string) => {
     const email = value.trim();
 
