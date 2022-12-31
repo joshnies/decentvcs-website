@@ -19,6 +19,18 @@ const App: Component = () => {
     a:hover {
       color: ${theme().colors.primary[700]};
     }
+
+    input, textarea {
+      border: 1px solid ${theme().colors.neutral[400]};
+  
+      &:focus {
+        border-color: ${theme().colors.neutral[0]};
+      }
+
+      ::placeholder {
+        color: ${theme().colors.neutral[400]};
+      }
+    }
   `;
 
   return (
