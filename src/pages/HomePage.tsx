@@ -15,6 +15,7 @@ import {
   HeroWaitlistInput,
 } from "./HomePage.styles";
 import config from "../config";
+import homeBackgroundImageUrl from "../assets/home-bg.png";
 
 const HomePage = () => {
   const onSubmitWaitlistForm = async (ref: HTMLInputElement, value: string) => {
@@ -61,7 +62,7 @@ const HomePage = () => {
 
   return (
     <BaseLayout>
-      <BackgroundImage src="/src/assets/home-bg.png" />
+      <BackgroundImage src={homeBackgroundImageUrl} />
       <Hero>
         <HeroSubtitle>Introducing DecentVCS</HeroSubtitle>
         <HeroTitle>Simple version control for massive projects.</HeroTitle>

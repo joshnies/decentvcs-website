@@ -1,10 +1,11 @@
 import { A } from "@solidjs/router";
 import { createMediaQuery } from "@solid-primitives/media";
+import { createSignal } from "solid-js";
 import config from "../config";
 import { LinkButton } from "./Buttons";
 import { HamburgerButton, Link, LinksContainer, Root } from "./Nav.styles";
-import { createSignal } from "solid-js";
 import NavOverlay from "./NavDrawer";
+import logoFullWhiteUrl from "../assets/logo-full-white.svg";
 
 export default function Nav() {
   const [showDrawer, setShowDrawer] = createSignal(false);
@@ -15,12 +16,7 @@ export default function Nav() {
       <NavOverlay style={{ height: showDrawer() ? "100%" : "0" }} />
       <Root>
         <A href="/">
-          <img
-            src="/src/assets/logo-full-white.svg"
-            alt="DecentVCS"
-            width={144}
-            height={24}
-          />
+          <img src={logoFullWhiteUrl} alt="DecentVCS" width={144} height={24} />
         </A>
         {!showLinks() && (
           <HamburgerButton onClick={() => setShowDrawer(!showDrawer())}>

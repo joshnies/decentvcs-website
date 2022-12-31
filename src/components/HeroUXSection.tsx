@@ -1,5 +1,6 @@
 import { Component } from "solid-js";
 import { Content, Root, Screen, TextBlock } from "./HeroUXSection.styles";
+import homeUXImageUrl from "../assets/home-ux-4k.png";
 
 const HeroUXSection: Component = () => {
   return (
@@ -15,10 +16,7 @@ const HeroUXSection: Component = () => {
             uptime, as well as enhanced security across the board.
           </p>
         </TextBlock>
-        <Screen
-          src="/src/assets/home-ux-4k.png"
-          alt="DecentVCS desktop app screenshot"
-        />
+        <Screen src={homeUXImageUrl} alt="DecentVCS desktop app screenshot" />
       </Content>
     </Root>
   );
