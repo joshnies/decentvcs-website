@@ -12,7 +12,7 @@ const SupportPage: Component = () => {
   const onSubmit = (e: Event) => {
     e.preventDefault();
 
-    // TODO: Handle onSubmit
+    // TODO: Send request to cloud function for sending email
     console.log("TODO: Handle onSubmit");
     console.log({
       firstName: firstNameRef?.value,
