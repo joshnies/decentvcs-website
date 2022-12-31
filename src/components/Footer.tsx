@@ -34,7 +34,8 @@ const Footer: Component = () => {
           </Sitemap>
         </MainGroup>
         <Copyright>
-          Copyright 2023 DecentVCS, LLC. All rights reserved.
+          Copyright {new Date().getFullYear()} DecentVCS, LLC. All rights
+          reserved.
         </Copyright>
       </Content>
     </Root>
