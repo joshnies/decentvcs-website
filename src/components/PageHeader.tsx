@@ -11,9 +11,9 @@ const PageHeader: Component<PageHeaderProps> = (props) => {
   return (
     <Root>
       <Header>
-        <h4>Support</h4>
-        <h2>We&apos;ve got all &apos;dem answers.</h2>
-        <p>We should get back to you within 24 business hours.</p>
+        <h4>{props.subtitle}</h4>
+        <h2>{props.title}</h2>
+        <p>{props.description}</p>
       </Header>
     </Root>
   );
