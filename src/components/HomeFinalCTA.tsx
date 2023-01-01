@@ -2,6 +2,7 @@ import { Component } from "solid-js";
 import { Root, StyledInputWithButton } from "./HomeFinalCTA.styles";
 
 export interface HomeFinalCTAProps {
+  loading: boolean;
   onSubmitWaitlistForm: (ref: HTMLInputElement, value: string) => void;
 }
 
@@ -14,6 +15,7 @@ const HomeFinalCTA: Component<HomeFinalCTAProps> = (props) => {
         <StyledInputWithButton
           type="email"
           placeholder="Enter email address"
+          loading={props.loading}
           onSubmit={props.onSubmitWaitlistForm}
         >
           Join waitlist

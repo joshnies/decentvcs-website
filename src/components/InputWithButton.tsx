@@ -7,6 +7,7 @@ type OriginalInputProps = JSX.InputHTMLAttributes<HTMLInputElement> & AsProps;
 
 export interface InputWithButtonProps
   extends Omit<OriginalInputProps, "onSubmit"> {
+  loading?: boolean;
   onSubmit: (ref: HTMLInputElement, value: string) => void;
 }
 
@@ -29,7 +30,9 @@ const InputWithButton: Component<InputWithButtonProps> = (props) => {
   return (
     <Root class={props.class} style={props.style} onSubmit={onSubmit}>
       <StyledInput ref={inputRef} {..._.omit(props, ["style", "onSubmit"])} />
-      <StyledButton type="submit">{props.children}</StyledButton>
+      <StyledButton type="submit" loading={props.loading}>
+        {props.children}
+      </StyledButton>
     </Root>
   );
 };

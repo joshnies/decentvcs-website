@@ -1,6 +1,6 @@
 import { Component, createSignal } from "solid-js";
 import BackgroundImage from "../components/BackgroundImage";
-import { Button } from "../components/Buttons";
+import Button from "../components/Button";
 import BaseLayout from "../layouts/BaseLayout";
 import { Content, Form, FormContainer, InputGroup } from "./SupportPage.styles";
 import bgImageUrl from "../assets/bg-2.png";

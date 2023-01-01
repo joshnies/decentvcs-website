@@ -1,5 +1,5 @@
 import { styled } from "solid-styled-components";
-import { Button } from "./Buttons";
+import Button from "./Button";
 
 export const Root = styled.form`
   position: relative;

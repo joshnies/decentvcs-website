@@ -1,6 +1,6 @@
 import toast from "solid-toast";
 import { isEmail } from "class-validator";
-import { Component } from "solid-js";
+import { Component, createSignal } from "solid-js";
 import HeroUXSection from "../components/HeroUXSection";
 import HomeFeature from "../components/HomeFeature";
 import HomeFinalCTA from "../components/HomeFinalCTA";
@@ -19,6 +19,8 @@ import homeBackgroundImageUrl from "../assets/home-bg.png";
 import BackgroundImage from "../components/BackgroundImage";
 
 const HomePage: Component = () => {
+  const [joiningWaitlist, setJoiningWaitlist] = createSignal(false);
+
   const onSubmitWaitlistForm = async (ref: HTMLInputElement, value: string) => {
     const email = value.trim();
 
@@ -32,6 +34,7 @@ const HomePage: Component = () => {
     }
 
     try {
+      setJoiningWaitlist(true);
       const res = await fetch(config.functions.joinWaitlist, {
         method: "POST",
         mode: "no-cors",
@@ -50,6 +53,7 @@ const HomePage: Component = () => {
     } catch (err) {
       console.error(err);
       toast.error("Something went wrong. Please try again later.");
+      setJoiningWaitlist(false);
       return;
     }
 
@@ -59,6 +63,8 @@ const HomePage: Component = () => {
 
     // Clear input
     ref.value = "";
+
+    setJoiningWaitlist(false);
   };
 
   return (
@@ -70,6 +76,7 @@ const HomePage: Component = () => {
         <HeroWaitlistInput
           type="email"
           placeholder="Enter email address"
+          loading={joiningWaitlist()}
           onSubmit={onSubmitWaitlistForm}
         >
           Join waitlist
@@ -103,7 +110,10 @@ const HomePage: Component = () => {
         </HomeFeature>
       </Features>
       <HomePriceCard />
-      <HomeFinalCTA onSubmitWaitlistForm={onSubmitWaitlistForm} />
+      <HomeFinalCTA
+        loading={joiningWaitlist()}
+        onSubmitWaitlistForm={onSubmitWaitlistForm}
+      />
     </BaseLayout>
   );
 };

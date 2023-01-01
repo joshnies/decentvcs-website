@@ -2,7 +2,7 @@ import { A, useLocation } from "@solidjs/router";
 import { createMediaQuery } from "@solid-primitives/media";
 import { createSignal } from "solid-js";
 import config from "../config";
-import { LinkButton } from "./Buttons";
+import LinkButton from "./LinkButton";
 import { HamburgerButton, Link, LinksContainer, Root } from "./Nav.styles";
 import NavOverlay from "./NavDrawer";
 import logoFullWhiteUrl from "../assets/logo-full-white.svg";
