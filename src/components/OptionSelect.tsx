@@ -14,6 +14,7 @@ const OptionSelect: Component<OptionSelectProps> = (props) => {
       <For each={props.options}>
         {(option) => (
           <Option
+            type="button"
             selected={option === props.selected}
             onClick={() => props.onChange(option)}
           >

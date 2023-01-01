@@ -73,7 +73,7 @@ const SupportPage: Component = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          inquiryType,
+          inquiry_type: inquiryType(),
           email,
           name: `${firstName} ${lastName}`,
           message,
