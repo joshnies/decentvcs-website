@@ -103,7 +103,7 @@ const HomePage: Component = () => {
         </HomeFeature>
       </Features>
       <HomePriceCard />
-      <HomeFinalCTA />
+      <HomeFinalCTA onSubmitWaitlistForm={onSubmitWaitlistForm} />
     </BaseLayout>
   );
 };
