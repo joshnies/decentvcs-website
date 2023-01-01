@@ -8,7 +8,6 @@ export const Root = styled.div`
 `;
 
 export const Header = styled.header`
-  width: 50%;
   gap: 0.5rem;
   margin: 4rem 0;
 

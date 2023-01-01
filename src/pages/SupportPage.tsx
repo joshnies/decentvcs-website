@@ -135,11 +135,7 @@ const SupportPage: Component = () => {
             </InputGroup>
             <input ref={emailRef} type="email" placeholder="Email" />
             <textarea ref={messageRef} placeholder="Message" />
-            <Button
-              type="submit"
-              loading={sending()}
-              style={{ width: "170px" }}
-            >
+            <Button type="submit" loading={sending()}>
               Send message
             </Button>
           </Form>
