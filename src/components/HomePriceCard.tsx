@@ -44,6 +44,10 @@ const HomePriceCard: Component = () => {
           </li>
           <li>
             <i class="ph-check" />
+            Unreal Engine and Unity integrations
+          </li>
+          <li>
+            <i class="ph-check" />
             <div>
               10% donated to{" "}
               <a
