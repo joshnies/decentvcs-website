@@ -8,7 +8,8 @@ if (!docsUrl) {
   throw new Error("VITE_DOCS_URL is not set");
 }
 
-const joinWaitlistWebhookUrl = import.meta.env.VITE_JOIN_WAITLIST_WEBHOOK_URL;
+const joinWaitlistFuncUrl = import.meta.env.VITE_FN_JOIN_WAITLIST_URL;
+const sendSupportEmailFuncUrl = import.meta.env.VITE_FN_SEND_SUPPORT_EMAIL_URL;
 
 const supportEmail = import.meta.env.VITE_SUPPORT_EMAIL;
 if (!supportEmail) {
@@ -20,11 +21,11 @@ if (!stytchPublicToken) {
   throw new Error("VITE_STYTCH_PUBLIC_TOKEN is not set");
 }
 
+const defaultFuncUrl = "http://localhost:4000";
+
 const config = {
   /** Deployed environment name. */
   env: (import.meta.env.NODE_ENV as string | undefined) || "development",
-  /** "Join Waitlist" webhook URL. */
-  joinWaitlistWebhookUrl: joinWaitlistWebhookUrl ?? "http://localhost:4000",
   /** Support email address. */
   supportEmail,
   routes: {
@@ -34,6 +35,10 @@ const config = {
     support: "/support",
     termsOfService: "/terms-of-service",
     privacyPolicy: "/privacy-policy",
+  },
+  functions: {
+    joinWaitlist: joinWaitlistFuncUrl ?? defaultFuncUrl,
+    sendSupportEmail: sendSupportEmailFuncUrl ?? defaultFuncUrl,
   },
   stytch: {
     /** Stytch public token. */

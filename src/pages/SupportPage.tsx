@@ -8,6 +8,7 @@ import PageHeader from "../components/PageHeader";
 import OptionSelect from "../components/OptionSelect";
 import toast from "solid-toast";
 import { isEmail } from "class-validator";
+import config from "../config";
 
 const SupportPage: Component = () => {
   let firstNameRef: HTMLInputElement | undefined;
@@ -24,7 +25,7 @@ const SupportPage: Component = () => {
 
   const [inquiryType, setInquiryType] = createSignal<string>(inquiryOptions[0]);
 
-  const onSubmit = (e: Event) => {
+  const onSubmit = async (e: Event) => {
     e.preventDefault();
 
     // Validate form
@@ -63,14 +64,34 @@ const SupportPage: Component = () => {
       return;
     }
 
-    // TODO: Send request to cloud function for sending email
-    console.log("TODO: Handle onSubmit");
-    console.log({
-      inquiryType: inquiryType(),
-      firstName: firstNameRef?.value,
-      lastName: lastNameRef?.value,
-      email: emailRef?.value,
-      message: messageRef?.value,
+    try {
+      const res = await fetch(config.functions.sendSupportEmail, {
+        method: "POST",
+        mode: "no-cors",
+        cache: "no-cache",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          name: `${firstName} ${lastName}`,
+          message,
+        }),
+      });
+
+      if (![200, 0].includes(res.status)) {
+        throw new Error(`Received ${res.status} status code from function.`);
+      }
+    } catch (err) {
+      console.error(err);
+      toast.error(
+        `Something went wrong. Please email us manually at ${config.supportEmail}`
+      );
+      return;
+    }
+
+    toast.success("Message sent! We'll get back to you as soon as possible.", {
+      duration: 5000, // 5 seconds
     });
   };
 

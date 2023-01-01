@@ -32,7 +32,7 @@ const HomePage: Component = () => {
     }
 
     try {
-      const res = await fetch(config.joinWaitlistWebhookUrl, {
+      const res = await fetch(config.functions.joinWaitlist, {
         method: "POST",
         mode: "no-cors",
         cache: "no-cache",
@@ -45,7 +45,7 @@ const HomePage: Component = () => {
       });
 
       if (![200, 0].includes(res.status)) {
-        throw new Error(`Received ${res.status} status code from webhook.`);
+        throw new Error(`Received ${res.status} status code from function.`);
       }
     } catch (err) {
       console.error(err);
