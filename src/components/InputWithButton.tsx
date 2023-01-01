@@ -1,7 +1,14 @@
 import _ from "lodash";
-import { Component } from "solid-js";
+import { Component, JSX } from "solid-js";
+import { AsProps } from "solid-styled-components";
 import { Root, StyledButton, StyledInput } from "./InputWithButton.styles";
-import { InputWithButtonProps } from "./InputWithButton.types";
+
+type OriginalInputProps = JSX.InputHTMLAttributes<HTMLInputElement> & AsProps;
+
+export interface InputWithButtonProps
+  extends Omit<OriginalInputProps, "onSubmit"> {
+  onSubmit: (ref: HTMLInputElement, value: string) => void;
+}
 
 /** Input component with embedded button. */
 const InputWithButton: Component<InputWithButtonProps> = (props) => {

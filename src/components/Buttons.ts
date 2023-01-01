@@ -1,6 +1,13 @@
 import { A } from "@solidjs/router";
-import { styled } from "solid-styled-components";
-import { ButtonProps } from "./Buttons.types";
+import { JSX } from "solid-js";
+import { AsProps, styled } from "solid-styled-components";
+
+type OriginalButtonProps = JSX.ButtonHTMLAttributes<HTMLButtonElement> &
+  AsProps;
+
+export interface ButtonProps extends OriginalButtonProps {
+  loading?: boolean;
+}
 
 export const Button = styled.button<ButtonProps>`
   display: flex;

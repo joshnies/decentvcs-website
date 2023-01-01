@@ -1,7 +1,10 @@
 import { Component } from "solid-js";
+import BackgroundImage from "../components/BackgroundImage";
 import { Button } from "../components/Buttons";
 import BaseLayout from "../layouts/BaseLayout";
-import { Container, Form, Header, InputGroup } from "./SupportPage.styles";
+import { Content, Form, FormContainer, InputGroup } from "./SupportPage.styles";
+import bgImageUrl from "../assets/bg-2.png";
+import PageHeader from "../components/PageHeader";
 
 const SupportPage: Component = () => {
   let firstNameRef: HTMLInputElement | undefined;
@@ -24,22 +27,26 @@ const SupportPage: Component = () => {
 
   return (
     <BaseLayout>
-      <Container>
-        <Header>
-          <h4>Support</h4>
-          <h2>We&apos;ve got all &apos;dem answers.</h2>
-          <p>We should get back to you within 24 business hours.</p>
-        </Header>
-        <Form onSubmit={onSubmit}>
-          <InputGroup>
-            <input ref={firstNameRef} type="text" placeholder="First name" />
-            <input ref={lastNameRef} type="text" placeholder="Last name" />
-          </InputGroup>
-          <input type="email" placeholder="Email" />
-          <textarea ref={messageRef} placeholder="Message" />
-          <Button type="submit">Send message</Button>
-        </Form>
-      </Container>
+      <BackgroundImage src={bgImageUrl} />
+      <PageHeader
+        subtitle="Support"
+        title="We've got all 'dem answers."
+        description="We should get back to you within 24 business hours."
+      />
+      <Content>
+        <FormContainer>
+          <Form onSubmit={onSubmit}>
+            <h3>What's your inquiry about?</h3>
+            <InputGroup>
+              <input ref={firstNameRef} type="text" placeholder="First name" />
+              <input ref={lastNameRef} type="text" placeholder="Last name" />
+            </InputGroup>
+            <input type="email" placeholder="Email" />
+            <textarea ref={messageRef} placeholder="Message" />
+            <Button type="submit">Send message</Button>
+          </Form>
+        </FormContainer>
+      </Content>
     </BaseLayout>
   );
 };

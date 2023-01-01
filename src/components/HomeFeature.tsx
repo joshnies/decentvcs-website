@@ -1,7 +1,12 @@
 import { createMediaQuery } from "@solid-primitives/media";
 import { ParentComponent } from "solid-js";
 import { Root } from "./HomeFeature.styles";
-import { HomeFeatureProps } from "./HomeFeature.types";
+
+export interface HomeFeatureProps {
+  subtitle: string;
+  title: string;
+  flip?: boolean;
+}
 
 const HomeFeature: ParentComponent<HomeFeatureProps> = (props) => {
   const isLarge = createMediaQuery("(min-width: 768px)");

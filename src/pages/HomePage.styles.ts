@@ -1,15 +1,6 @@
 import { styled } from "solid-styled-components";
 import InputWithButton from "../components/InputWithButton";
 
-export const BackgroundImage = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: -9999;
-`;
-
 export const Hero = styled.section`
   display: flex;
   flex-direction: column;

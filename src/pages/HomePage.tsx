@@ -8,7 +8,6 @@ import HomePriceCard from "../components/HomePriceCard";
 import ScrollIndicator from "../components/ScrollIndicator";
 import BaseLayout from "../layouts/BaseLayout";
 import {
-  BackgroundImage,
   Features,
   Hero,
   HeroSubtitle,
@@ -17,6 +16,7 @@ import {
 } from "./HomePage.styles";
 import config from "../config";
 import homeBackgroundImageUrl from "../assets/home-bg.png";
+import BackgroundImage from "../components/BackgroundImage";
 
 const HomePage: Component = () => {
   const onSubmitWaitlistForm = async (ref: HTMLInputElement, value: string) => {
