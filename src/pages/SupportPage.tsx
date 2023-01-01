@@ -29,10 +29,10 @@ const SupportPage: Component = () => {
     e.preventDefault();
 
     // Validate form
-    const firstName = firstNameRef?.value?.trim() ?? "";
-    const lastName = lastNameRef?.value?.trim() ?? "";
-    const email = emailRef?.value?.trim() ?? "";
-    const message = messageRef?.value?.trim() ?? "";
+    const firstName = firstNameRef!.value.trim();
+    const lastName = lastNameRef!.value.trim();
+    const email = emailRef!.value.trim();
+    const message = messageRef!.value.trim();
 
     if (firstName.length === 0) {
       toast.error("Please enter your first name.");
@@ -94,6 +94,13 @@ const SupportPage: Component = () => {
     toast.success("Message sent! We'll get back to you as soon as possible.", {
       duration: 5000, // 5 seconds
     });
+
+    // Clear inputs
+    setInquiryType(inquiryOptions[0]);
+    firstNameRef!.value = "";
+    lastNameRef!.value = "";
+    emailRef!.value = "";
+    messageRef!.value = "";
   };
 
   return (
