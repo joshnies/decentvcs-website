@@ -33,8 +33,9 @@ const HomePage: Component = () => {
       return;
     }
 
+    setJoiningWaitlist(true);
+
     try {
-      setJoiningWaitlist(true);
       const res = await fetch(config.functions.joinWaitlist, {
         method: "POST",
         mode: "no-cors",

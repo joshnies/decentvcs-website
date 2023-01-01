@@ -23,6 +23,7 @@ const SupportPage: Component = () => {
     "Other",
   ];
 
+  const [sending, setSending] = createSignal(false);
   const [inquiryType, setInquiryType] = createSignal<string>(inquiryOptions[0]);
 
   const onSubmit = async (e: Event) => {
@@ -64,6 +65,8 @@ const SupportPage: Component = () => {
       return;
     }
 
+    setSending(true);
+
     try {
       const res = await fetch(config.functions.sendSupportEmail, {
         method: "POST",
@@ -88,6 +91,7 @@ const SupportPage: Component = () => {
       toast.error(
         `Something went wrong. Please email us manually at ${config.supportEmail}`
       );
+      setSending(false);
       return;
     }
 
@@ -101,6 +105,8 @@ const SupportPage: Component = () => {
     lastNameRef!.value = "";
     emailRef!.value = "";
     messageRef!.value = "";
+
+    setSending(false);
   };
 
   return (
@@ -129,7 +135,11 @@ const SupportPage: Component = () => {
             </InputGroup>
             <input ref={emailRef} type="email" placeholder="Email" />
             <textarea ref={messageRef} placeholder="Message" />
-            <Button type="submit" style={{ width: "170px" }}>
+            <Button
+              type="submit"
+              loading={sending()}
+              style={{ width: "170px" }}
+            >
               Send message
             </Button>
           </Form>
