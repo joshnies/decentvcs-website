@@ -12,9 +12,6 @@ export default function Nav() {
   const location = useLocation();
   const showLinks = createMediaQuery("(min-width: 768px)");
 
-  const downloadsRoute = "/downloads";
-  const supportRoute = "/support";
-
   return (
     <>
       <NavOverlay style={{ height: showDrawer() ? "100%" : "0" }} />
@@ -29,20 +26,20 @@ export default function Nav() {
         )}
         {showLinks() && (
           <LinksContainer>
-            <Link href={config.docsUrl}>Documentation</Link>
+            <Link href={config.routes.documentation}>Documentation</Link>
             <Link
-              href={downloadsRoute}
-              active={location.pathname === downloadsRoute}
+              href={config.routes.downloads}
+              active={location.pathname === config.routes.downloads}
             >
               Downloads
             </Link>
             <Link
-              href={supportRoute}
-              active={location.pathname === supportRoute}
+              href={config.routes.support}
+              active={location.pathname === config.routes.support}
             >
               Support
             </Link>
-            <LinkButton href={config.dashUrl}>Sign in</LinkButton>
+            <LinkButton href={config.routes.dashboard}>Sign in</LinkButton>
           </LinksContainer>
         )}
       </Root>

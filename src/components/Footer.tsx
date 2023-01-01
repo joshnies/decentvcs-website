@@ -20,15 +20,14 @@ const Footer: Component = () => {
           <Sitemap>
             <SitemapGroup>
               <h3>Version Control</h3>
-              <A href="/">About</A>
-              <A href={config.docsUrl}>Documentation</A>
-              <A href="/downloads">Downloads</A>
-              <A href="/support">Support</A>
+              <A href={config.routes.documentation}>Documentation</A>
+              <A href={config.routes.downloads}>Downloads</A>
+              <A href={config.routes.support}>Support</A>
             </SitemapGroup>
             <SitemapGroup>
               <h3>Legal</h3>
-              <A href="/terms-of-service">Terms of service</A>
-              <A href="/privacy-policy">Privacy policy</A>
+              <A href={config.routes.termsOfService}>Terms of service</A>
+              <A href={config.routes.privacyPolicy}>Privacy policy</A>
             </SitemapGroup>
           </Sitemap>
         </MainGroup>

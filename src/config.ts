@@ -23,14 +23,18 @@ if (!stytchPublicToken) {
 const config = {
   /** Deployed environment name. */
   env: (import.meta.env.NODE_ENV as string | undefined) || "development",
-  /** DecentVCS dashboard URL. */
-  dashUrl,
-  /** DecentVCS documentation site URL. */
-  docsUrl,
   /** "Join Waitlist" webhook URL. */
   joinWaitlistWebhookUrl: joinWaitlistWebhookUrl ?? "http://localhost:4000",
   /** Support email address. */
   supportEmail,
+  routes: {
+    dashboard: dashUrl,
+    documentation: docsUrl,
+    downloads: "/downloads",
+    support: "/support",
+    termsOfService: "/terms-of-service",
+    privacyPolicy: "/privacy-policy",
+  },
   stytch: {
     /** Stytch public token. */
     publicToken: stytchPublicToken,

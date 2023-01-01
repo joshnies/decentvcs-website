@@ -7,6 +7,7 @@ import { Toaster } from "solid-toast";
 import { lightTheme } from "./themes";
 import HomePage from "./pages/HomePage";
 import SupportPage from "./pages/SupportPage";
+import config from "./config";
 
 const App: Component = () => {
   const [theme] = createSignal<typeof lightTheme>(lightTheme);
@@ -40,7 +41,7 @@ const App: Component = () => {
       <Router>
         <Routes>
           <Route path="/" component={HomePage} />
-          <Route path="/support" component={SupportPage} />
+          <Route path={config.routes.support} component={SupportPage} />
         </Routes>
       </Router>
     </ThemeProvider>
