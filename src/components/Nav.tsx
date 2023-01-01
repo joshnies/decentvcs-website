@@ -26,8 +26,8 @@ export default function Nav() {
         )}
         {showLinks() && (
           <LinksContainer>
-            {/* <Link href={config.routes.documentation}>Documentation</Link>
-            <Link
+            <Link href={config.routes.documentation}>Documentation</Link>
+            {/* <Link
               href={config.routes.downloads}
               active={location.pathname === config.routes.downloads}
             >
