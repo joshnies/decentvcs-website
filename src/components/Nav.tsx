@@ -1,4 +1,4 @@
-import { A } from "@solidjs/router";
+import { A, useLocation } from "@solidjs/router";
 import { createMediaQuery } from "@solid-primitives/media";
 import { createSignal } from "solid-js";
 import config from "../config";
@@ -9,7 +9,11 @@ import logoFullWhiteUrl from "../assets/logo-full-white.svg";
 
 export default function Nav() {
   const [showDrawer, setShowDrawer] = createSignal(false);
+  const location = useLocation();
   const showLinks = createMediaQuery("(min-width: 768px)");
+
+  const downloadsRoute = "/downloads";
+  const supportRoute = "/support";
 
   return (
     <>
@@ -26,9 +30,19 @@ export default function Nav() {
         {showLinks() && (
           <LinksContainer>
             <Link href={config.docsUrl}>Documentation</Link>
-            <Link href="/support">Support</Link>
-            <Link href={config.dashUrl}>Sign in</Link>
-            <LinkButton href="/">Join waitlist</LinkButton>
+            <Link
+              href={downloadsRoute}
+              active={location.pathname === downloadsRoute}
+            >
+              Downloads
+            </Link>
+            <Link
+              href={supportRoute}
+              active={location.pathname === supportRoute}
+            >
+              Support
+            </Link>
+            <LinkButton href={config.dashUrl}>Sign in</LinkButton>
           </LinksContainer>
         )}
       </Root>

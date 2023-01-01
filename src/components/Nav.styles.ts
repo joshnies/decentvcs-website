@@ -48,8 +48,9 @@ export const LinksContainer = styled.div`
   gap: 4rem;
 `;
 
-export const Link = styled(A)`
-  color: ${({ theme }) => theme?.colors.neutral[400]};
+export const Link = styled(A)<{ active?: boolean }>`
+  color: ${({ theme, active }) =>
+    active ? theme?.colors.neutral[0] : theme?.colors.neutral[400]};
 
   &:hover {
     color: ${({ theme }) => theme?.colors.neutral[0]};
