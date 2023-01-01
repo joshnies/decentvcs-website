@@ -20,8 +20,8 @@ const Footer: Component = () => {
           <Sitemap>
             <SitemapGroup>
               <h3>Version Control</h3>
-              <A href={config.routes.documentation}>Documentation</A>
-              <A href={config.routes.downloads}>Downloads</A>
+              {/* <A href={config.routes.documentation}>Documentation</A>
+              <A href={config.routes.downloads}>Downloads</A> */}
               <A href={config.routes.support}>Support</A>
             </SitemapGroup>
             <SitemapGroup>
