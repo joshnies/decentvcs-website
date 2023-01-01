@@ -1,13 +1,13 @@
-import { A } from "@solidjs/router";
+// import { A } from "@solidjs/router";
 import { Component } from "solid-js";
-import config from "../config";
+// import config from "../config";
 import {
   Content,
   Copyright,
   MainGroup,
   Root,
-  Sitemap,
-  SitemapGroup,
+  // Sitemap,
+  // SitemapGroup,
 } from "./Footer.styles";
 import logoFullWhiteUrl from "../assets/logo-full-white.svg";
 
@@ -17,11 +17,11 @@ const Footer: Component = () => {
       <Content>
         <MainGroup>
           <img src={logoFullWhiteUrl} alt="DecentVCS" width={144} height={24} />
-          <Sitemap>
+          {/* <Sitemap>
             <SitemapGroup>
               <h3>Version Control</h3>
-              {/* <A href={config.routes.documentation}>Documentation</A>
-              <A href={config.routes.downloads}>Downloads</A> */}
+              <A href={config.routes.documentation}>Documentation</A>
+              <A href={config.routes.downloads}>Downloads</A>
               <A href={config.routes.support}>Support</A>
             </SitemapGroup>
             <SitemapGroup>
@@ -29,7 +29,7 @@ const Footer: Component = () => {
               <A href={config.routes.termsOfService}>Terms of service</A>
               <A href={config.routes.privacyPolicy}>Privacy policy</A>
             </SitemapGroup>
-          </Sitemap>
+          </Sitemap> */}
         </MainGroup>
         <Copyright>
           Copyright {new Date().getFullYear()} DecentVCS, LLC. All rights
