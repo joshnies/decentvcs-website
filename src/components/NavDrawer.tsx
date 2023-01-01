@@ -9,7 +9,8 @@ const NavOverlay: Component<JSX.BaseHTMLAttributes<HTMLElement>> = (props) => {
       {/* <A href={config.routes.documentation}>Documentation</A>
       <A href={config.routes.downloads}>Downloads</A> */}
       <A href={config.routes.support}>Support</A>
-      <A href={config.routes.dashboard}>Sign in</A>
+      {/* <A href={config.routes.dashboard}>Sign in</A> */}
+      <A href="/">Join waitlist</A>
     </Root>
   );
 };

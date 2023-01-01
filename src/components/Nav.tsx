@@ -39,7 +39,8 @@ export default function Nav() {
             >
               Support
             </Link>
-            <LinkButton href={config.routes.dashboard}>Sign in</LinkButton>
+            {/* <LinkButton href={config.routes.dashboard}>Sign in</LinkButton> */}
+            <LinkButton href="/">Join waitlist</LinkButton>
           </LinksContainer>
         )}
       </Root>
