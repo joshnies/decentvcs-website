@@ -5,6 +5,7 @@
   "scripts": {
     "start": "doppler run -- vite",
     "build": "vite build",
+    "build:lcl": "doppler run -- vite build",
     "serve": "vite preview"
   },
   "devDependencies": {
