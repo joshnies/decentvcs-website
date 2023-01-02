@@ -12,7 +12,8 @@ import {
   Scripts,
   Title,
 } from "solid-start";
-import "./root.css";
+import "./reset.css";
+import "./index.css";
 
 export default function Root() {
   return (
@@ -37,7 +38,6 @@ export default function Root() {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
-        <script src="https://js.stripe.com/v3" async></script>
         <script src="https://unpkg.com/phosphor-icons"></script>
       </Head>
       <Body>

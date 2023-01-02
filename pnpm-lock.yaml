@@ -29,12 +29,12 @@ dependencies:
   '@solidjs/meta': 0.28.2_solid-js@1.6.6
   '@solidjs/router': 0.6.0_solid-js@1.6.6
   '@stripe/stripe-js': 1.46.0
-  '@stytch/vanilla-js': 0.5.4_ft2wq4lchsqsukntf7yizn2f3q
+  '@stytch/vanilla-js': 0.5.4_tc7jaa4baouxshtrotwtzoolyu
   class-validator: 0.13.2
   csstype: 3.1.1
   lodash: 4.17.21
   phosphor-icons: 1.4.2
-  react-is: 16.13.1
+  react-is: 18.2.0
   solid-cached-resource: 0.5.1
   solid-js: 1.6.6
   solid-start: 0.2.10_7g4juq64zsg2futgalxovnqs54
@@ -86,7 +86,7 @@ packages:
       convert-source-map: 1.9.0
       debug: 4.3.4
       gensync: 1.0.0-beta.2
-      json5: 2.2.2
+      json5: 2.2.3
       semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
@@ -1538,7 +1538,7 @@ packages:
       uuid: 8.3.2
     dev: false
 
-  /@stytch/vanilla-js/0.5.4_ft2wq4lchsqsukntf7yizn2f3q:
+  /@stytch/vanilla-js/0.5.4_tc7jaa4baouxshtrotwtzoolyu:
     resolution: {integrity: sha512-hvX9zJTDQu/DqiVirVqFm0vEqPyfSCyLk2i1V9llJpYSlMNo7yUbDC1hll3GhSet9h+F+Kark/ePQI6dXA9adA==}
     dependencies:
       '@github/webauthn-json': 1.0.3
@@ -1550,7 +1550,7 @@ packages:
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       react-hot-toast: 2.2.0_pwge5r66yg44rq5pj4ruhckhdm
-      styled-components: 5.3.5_d5kzqcx725xkmyluugjzy5jwom
+      styled-components: 5.3.5_v5ja746gkdtknuc6tj46sve3be
       uuid: 8.3.2
     transitivePeerDependencies:
       - csstype
@@ -1659,8 +1659,8 @@ packages:
     transitivePeerDependencies:
       - debug
 
-  /babel-plugin-jsx-dom-expressions/0.35.8_@babel+core@7.20.7:
-    resolution: {integrity: sha512-IzObXlDFA80wyEW/IUtCxaUAoJnq4CTpvcvC1xBZBlMpJDwmK6mIYnTZ9xgFyGCrAjC0LxVcqeDQx31gJJ4UJQ==}
+  /babel-plugin-jsx-dom-expressions/0.35.9_@babel+core@7.20.7:
+    resolution: {integrity: sha512-YXb+I4dej5E94bzPzPBECUT5Q5vuSQJzsq1NgW8fe4gsgg6vcy6c6VqixgtY0UU8udKTc1Ls5CmgaFDj2fO9lA==}
     peerDependencies:
       '@babel/core': ^7.0.0
     dependencies:
@@ -1713,7 +1713,7 @@ packages:
       babel-plugin-syntax-jsx: 6.18.0
       lodash: 4.17.21
       picomatch: 2.3.1
-      styled-components: 5.3.5_d5kzqcx725xkmyluugjzy5jwom
+      styled-components: 5.3.5_v5ja746gkdtknuc6tj46sve3be
     dev: false
 
   /babel-plugin-syntax-jsx/6.18.0:
@@ -1726,7 +1726,7 @@ packages:
       '@babel/core': ^7.0.0
     dependencies:
       '@babel/core': 7.20.7
-      babel-plugin-jsx-dom-expressions: 0.35.8_@babel+core@7.20.7
+      babel-plugin-jsx-dom-expressions: 0.35.9_@babel+core@7.20.7
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -2602,8 +2602,8 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
-  /json5/2.2.2:
-    resolution: {integrity: sha512-46Tk9JiOL2z7ytNQWFLpj99RZkVgeHf87yGQKsIkaPz1qSH9UczKH1rO7K3wgRselo0tYMUNfecYpm/p1vC7tQ==}
+  /json5/2.2.3:
+    resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
     engines: {node: '>=6'}
     hasBin: true
 
@@ -2817,6 +2817,10 @@ packages:
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+    dev: false
+
+  /react-is/18.2.0:
+    resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
     dev: false
 
   /react/17.0.2:
@@ -3122,7 +3126,7 @@ packages:
     dependencies:
       ansi-regex: 5.0.1
 
-  /styled-components/5.3.5_d5kzqcx725xkmyluugjzy5jwom:
+  /styled-components/5.3.5_v5ja746gkdtknuc6tj46sve3be:
     resolution: {integrity: sha512-ndETJ9RKaaL6q41B69WudeqLzOpY1A/ET/glXkNZ2T7dPjPqpPCXXQjDFYZWwNnE5co0wX+gTCqx9mfxTmSIPg==}
     engines: {node: '>=10'}
     requiresBuild: true
@@ -3141,7 +3145,7 @@ packages:
       hoist-non-react-statics: 3.3.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-      react-is: 16.13.1
+      react-is: 18.2.0
       shallowequal: 1.1.0
       supports-color: 5.5.0
     dev: false
