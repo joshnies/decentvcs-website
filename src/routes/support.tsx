@@ -1,13 +1,17 @@
 import { Component, createSignal } from "solid-js";
+import toast from "solid-toast";
+import { isEmail } from "class-validator";
 import BackgroundImage from "../components/BackgroundImage";
 import Button from "../components/Button";
 import BaseLayout from "../layouts/BaseLayout";
-import { Content, Form, FormContainer, InputGroup } from "./SupportPage.styles";
-import bgImageUrl from "../assets/bg-2.png";
+import {
+  Content,
+  Form,
+  FormContainer,
+  InputGroup,
+} from "../components/SupportPage.styles";
 import PageHeader from "../components/PageHeader";
 import OptionSelect from "../components/OptionSelect";
-import toast from "solid-toast";
-import { isEmail } from "class-validator";
 import config from "../config";
 
 const SupportPage: Component = () => {
@@ -110,8 +114,8 @@ const SupportPage: Component = () => {
   };
 
   return (
-    <BaseLayout>
-      <BackgroundImage src={bgImageUrl} />
+    <BaseLayout title="Support">
+      <BackgroundImage src="/images/bg-2.png" />
       <PageHeader
         subtitle="Support"
         title="We've got all 'dem answers."

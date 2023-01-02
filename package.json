@@ -3,21 +3,23 @@
   "version": "1.0.0",
   "description": "DecentVCS website",
   "scripts": {
-    "start": "doppler run -- vite",
-    "build": "vite build",
-    "build:lcl": "doppler run -- vite build",
-    "serve": "vite preview"
+    "dev": "doppler run -- solid-start dev",
+    "build": "solid-start build",
+    "start": "solid-start start",
+    "preview": "doppler run -- solid-start start"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.189",
     "@types/node": "^18.11.9",
-    "typescript": "^4.8.2",
-    "vite": "^3.0.9",
-    "vite-plugin-solid": "^2.3.0"
+    "esbuild": "^0.14.54",
+    "solid-start-node": "^0.2.0",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.8"
   },
   "dependencies": {
     "@solid-primitives/media": "^2.0.4",
-    "@solidjs/router": "^0.5.0",
+    "@solidjs/meta": "^0.28.2",
+    "@solidjs/router": "^0.6.0",
     "@stripe/stripe-js": "^1.44.1",
     "@stytch/vanilla-js": "^0.5.1",
     "class-validator": "^0.13.2",
@@ -26,8 +28,10 @@
     "phosphor-icons": "^1.4.2",
     "react-is": ">= 16.8.0",
     "solid-cached-resource": "^0.5.1",
-    "solid-js": "^1.5.3",
+    "solid-js": "^1.6.2",
+    "solid-start": "^0.2.10",
     "solid-styled-components": "^0.28.5",
-    "solid-toast": "^0.3.5"
+    "solid-toast": "^0.3.5",
+    "undici": "^5.14.0"
   }
 }

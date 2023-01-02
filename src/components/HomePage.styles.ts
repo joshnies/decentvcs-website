@@ -1,5 +1,5 @@
 import { styled } from "solid-styled-components";
-import InputWithButton from "../components/InputWithButton";
+import InputWithButton from "./InputWithButton";
 
 export const Hero = styled.section`
   display: flex;

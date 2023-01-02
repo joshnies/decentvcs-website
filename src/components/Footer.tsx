@@ -9,14 +9,18 @@ import {
   // Sitemap,
   // SitemapGroup,
 } from "./Footer.styles";
-import logoFullWhiteUrl from "../assets/logo-full-white.svg";
 
 const Footer: Component = () => {
   return (
     <Root>
       <Content>
         <MainGroup>
-          <img src={logoFullWhiteUrl} alt="DecentVCS" width={144} height={24} />
+          <img
+            src="/images/logo-full-white.svg"
+            alt="DecentVCS"
+            width={144}
+            height={24}
+          />
           {/* <Sitemap>
             <SitemapGroup>
               <h3>Version Control</h3>

@@ -5,7 +5,6 @@ import config from "../config";
 import LinkButton from "./LinkButton";
 import { HamburgerButton, Link, LinksContainer, Root } from "./Nav.styles";
 import NavOverlay from "./NavDrawer";
-import logoFullWhiteUrl from "../assets/logo-full-white.svg";
 
 export default function Nav() {
   const [showDrawer, setShowDrawer] = createSignal(false);
@@ -17,7 +16,12 @@ export default function Nav() {
       <NavOverlay style={{ height: showDrawer() ? "100%" : "0" }} />
       <Root>
         <A href="/">
-          <img src={logoFullWhiteUrl} alt="DecentVCS" width={144} height={24} />
+          <img
+            src="/images/logo-full-white.svg"
+            alt="DecentVCS"
+            width={144}
+            height={24}
+          />
         </A>
         {!showLinks() && (
           <HamburgerButton onClick={() => setShowDrawer(!showDrawer())}>

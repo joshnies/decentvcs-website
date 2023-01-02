@@ -13,10 +13,9 @@ import {
   HeroSubtitle,
   HeroTitle,
   HeroWaitlistInput,
-} from "./HomePage.styles";
-import config from "../config";
-import homeBackgroundImageUrl from "../assets/home-bg.png";
+} from "../components/HomePage.styles";
 import BackgroundImage from "../components/BackgroundImage";
+import config from "../config";
 
 const HomePage: Component = () => {
   const [joiningWaitlist, setJoiningWaitlist] = createSignal(false);
@@ -70,7 +69,7 @@ const HomePage: Component = () => {
 
   return (
     <BaseLayout>
-      <BackgroundImage src={homeBackgroundImageUrl} />
+      <BackgroundImage src="/images/home-bg.png" />
       <Hero>
         <HeroSubtitle>Introducing DecentVCS</HeroSubtitle>
         <HeroTitle>Simple version control for massive projects.</HeroTitle>
